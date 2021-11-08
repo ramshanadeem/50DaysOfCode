@@ -34,3 +34,16 @@ const Repeated = (arr) => {
   }
 };
 console.log(Repeated([2, 3, 5, 1, 1, 1]));
+
+var moveZeroes = function (nums) {
+  var i, temp;
+
+  for (i = nums.length - 1; i >= 0; i--) {
+    if (nums[i] === 0) {
+      temp = nums.splice(i, 1);
+      nums.push(temp[0]);
+    }
+  }
+  return nums;
+};
+console.log(moveZeroes([0, 1, 0, 2]));
