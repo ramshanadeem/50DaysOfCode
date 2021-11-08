@@ -23,3 +23,14 @@ const replace = (arr) => {
   return arr;
 };
 console.log(replace([2, 8, 5, 1]));
+
+const Repeated = (arr) => {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[i] === arr[j]) {
+        return arr.length - 1;
+      }
+    }
+  }
+};
+console.log(Repeated([2, 3, 5, 1, 1, 1]));
